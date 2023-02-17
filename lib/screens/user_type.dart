@@ -56,12 +56,12 @@ class _ChooseTypeState extends State<ChooseType> {
             TextButton(
               onPressed: () {
                 if (dropdownValue == "Student" || dropdownValue == 'Faculty') {
-                  Navigator.of(context).push(
+                  Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
                         builder: (context) => const SignupScreen()),
                   );
                 } else {
-                  Navigator.of(context).push(
+                  Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
                         builder: (context) => const SignUpAlumni()),
                   );

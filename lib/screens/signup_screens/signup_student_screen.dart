@@ -2,6 +2,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import "package:flutter/material.dart";
 import 'package:image_picker/image_picker.dart';
+import 'package:revamph/screens/home.dart';
 import 'package:revamph/screens/login_screen.dart';
 import 'package:revamph/services/auth_service.dart';
 import 'package:revamph/shared_widgets/text_field_input.dart';
@@ -88,8 +89,8 @@ class _SignupScreenState extends State<SignupScreen> {
   }
 
   void toLogin() {
-    Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: ((context) => const LoginScreen())));
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: ((context) => const HomeScreen())));
   }
 
   @override

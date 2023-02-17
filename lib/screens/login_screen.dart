@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:revamph/screens/home.dart';
 import 'package:revamph/screens/user_type.dart';
 import 'package:revamph/services/auth_service.dart';
 import 'package:revamph/shared_widgets/text_field_input.dart';
@@ -35,6 +36,9 @@ class _LoginScreenState extends State<LoginScreen> {
     });
     if (res != "success" && mounted) {
       showSnackBar(context, res);
+    } else {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const HomeScreen()));
     }
   }
 
